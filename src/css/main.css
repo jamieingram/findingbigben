@@ -1,0 +1,15 @@
+.audio-cell {
+  background-image: url('../images/play.png');
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:#EEE;
+  min-height:100px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 30px;
+}
+
+.audio-cell.paused {
+  background-image: url('../images/pause.png');
+}
