@@ -5,9 +5,7 @@ CACHE MANIFEST
 index.html
 css/bootstrap.min.css
 css/main.css
-js/lib/bootstrap.min.js
-js/lib/jquery.min.js
-js/main.js
+js/dist/main.min.js
 
 # All other resources (e.g. sites) require the user to be online.
 NETWORK:

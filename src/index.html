@@ -1,34 +1,55 @@
 <!doctype html>
-<html lang="en" manifest="audiosamples.appcache">
+<!--<html lang="en" manifest="audiosamples.appcache">-->
+<html lang="en">
   <head>
     <title>Audio test</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="modal fade" tabindex="-1" id="welcome_modal" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Finding Big Ben</h2>
+          </div>
+          <div class="modal-body">
+            <p>Welcome to the website for Finding Big Ben - for Symphony Orchestra and audience with smartphones.</p>
+            <p>Composed by Adrian Budgen, commissioned by Ipswich Orchestral Society.</p>
+            <p>If you are in the audience please click the button below and choose from the list of months in the list.</p>
+            <div class="btn-centered">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#welcome_modal">Continue...</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <div class="container-fluid js-AudioFiles">
       <div class="row">
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="1">
+          <a href="#" class="js-playAudio" data-audio-id="1" data-audio-title="January">
             <div class="audio-cell">
               January
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="2">
+          <a href="#" class="js-playAudio" data-audio-id="2" data-audio-title="February">
             <div class="audio-cell">
               February
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="3">
+          <a href="#" class="js-playAudio" data-audio-id="3" data-audio-title="March">
             <div class="audio-cell">
               March
             </div>
@@ -37,21 +58,21 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="4">
+          <a href="#" class="js-playAudio" data-audio-id="4" data-audio-title="April">
             <div class="audio-cell">
               April
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="5">
+          <a href="#" class="js-playAudio" data-audio-id="5" data-audio-title="May">
             <div class="audio-cell">
               May
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="6">
+          <a href="#" class="js-playAudio" data-audio-id="6" data-audio-title="June">
             <div class="audio-cell">
               June
             </div>
@@ -60,21 +81,21 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="7">
+          <a href="#" class="js-playAudio" data-audio-id="7" data-audio-title="July">
             <div class="audio-cell">
               July
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="8">
+          <a href="#" class="js-playAudio" data-audio-id="8" data-audio-title="August">
             <div class="audio-cell">
               August
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="9">
+          <a href="#" class="js-playAudio" data-audio-id="9" data-audio-title="September">
             <div class="audio-cell">
               September
             </div>
@@ -83,31 +104,40 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="10">
+          <a href="#" class="js-playAudio" data-audio-id="10" data-audio-title="October">
             <div class="audio-cell">
               October
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="11">
+          <a href="#" class="js-playAudio" data-audio-id="11" data-audio-title="November">
             <div class="audio-cell">
               November
             </div>
           </a>
         </div>
         <div class="col-sm">
-          <a href="#" class="js-playAudio" data-audio-id="12">
+          <a href="#" class="js-playAudio" data-audio-id="12" data-audio-title="December">
             <div class="audio-cell">
               December
             </div>
           </a>
         </div>
       </div>
+      <div class="currently-playing disabled">
+        <div class="playing-text">
+          Nothing selected...
+        </div>
+        <div class="playing-icon">
+          <i class="fa fa-play-circle-o"></i>
+        </div>
+        <div class="progress-time">
+          <p>--:--</p>
+        </div>
+      </div>
     </div>
 
-    <script src="js/lib/bootstrap.min.js"></script>
-    <script src="js/lib/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/dist/main.min.js"></script>
   </body>
 </html>
