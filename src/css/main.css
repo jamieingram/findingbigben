@@ -7,20 +7,78 @@ h1 h2 h3 h4 h5 h6 {
   font-family: 'Slabo 27px', serif;
 }
 
-.audio-cell {
-  background-image: url('../images/play.png');
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color:#EEE;
-  min-height:100px;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 30px;
+.month1 {
+  background-color: #3291cb;
 }
 
-.audio-cell.paused {
-  background-image: url('../images/pause.png');
+.month2 {
+  background-color: #0061fb;
+}
+
+.month3 {
+  background-color: #2f2ea1;
+}
+
+.month4 {
+  background-color: #9b364f;
+}
+
+.month5 {
+  background-color: #ee4f35;
+}
+
+.month6 {
+  background-color: #ed6731;
+}
+
+.month7 {
+  background-color: #f29c31;
+}
+
+.month8 {
+  background-color: #f3bc32;
+}
+
+.month9 {
+  background-color: #fff74a;
+}
+
+.month10 {
+  background-color: #d7e23d;
+}
+
+.month11 {
+  background-color: #78a737;
+}
+
+.month12 {
+  background-color: #3291cb;
+  margin-bottom:40px;
+}
+
+.audio-cell {
+  min-height:100px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  color: white;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.status-icon {
+    font-size: 48px;
+    line-height: 100px;
+}
+
+.track-title {
+  float:left;
+  font-size:24px;
+  line-height: 90px;
+  padding-top:10px;
+}
+
+.status-icon {
+  float:right;
 }
 
 .btn-centered {
@@ -62,11 +120,10 @@ h1 h2 h3 h4 h5 h6 {
 
 .progress-time {
   float:right;
-  width:30px;
+  margin-right:5px;
 }
 
-.playing-icon {
-  width:20px;
+.play-status-icon {
   float:right;
   font-size: 24px;
 }
