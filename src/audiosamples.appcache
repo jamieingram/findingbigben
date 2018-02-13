@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2017-11-28:v1
+# 2018-02-13:v2
 
 # Explicitly cached entries
 index.html
@@ -13,8 +13,7 @@ NETWORK:
 
 # Additional resources to cache
 CACHE:
-images/pause.png
-images/play.png
+images/stars_background.jpg
 audio/1.mp3
 audio/2.mp3
 audio/3.mp3
