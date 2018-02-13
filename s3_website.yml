@@ -1,8 +1,8 @@
 # You can remove the first two lines to have credentials read from
 # the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY or
 # ~/.aws/credentials.
-s3_id: AKIAIRYEAD62Y6K4E2DA
-s3_secret: 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
+s3_id: <%= ENV['S3_ID'] %>
+s3_secret: <%= ENV['S3_SECRET'] %>
 s3_bucket: findingbigben.co.uk
 
 # set session_token if using temporary credentials with a session token (eg: when assuming a role)

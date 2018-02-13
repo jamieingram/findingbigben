@@ -20,6 +20,10 @@
 *.tar
 *.zip
 
+# Config #
+######################
+.env
+
 # Large content assets #
 *.wav
 *.mov
