@@ -22,7 +22,7 @@ $(function () {
       if (current_audio_id > 0) {
         var current_audio = audio_files[current_audio_id];
         var current_target = $('.js-playAudio[data-audio-id='+current_audio_id+']');
-        $(current_target).find('.status-icon').removeClass('fa-pause-circle-o').addClass('fa-play-circle-o');
+        $(current_target).find('.status-icon').removeClass('fa-pause-circle').addClass('fa-play-circle');
         current_audio.pause();
       }
       updatePlayStatus(false, false);
@@ -35,11 +35,11 @@ $(function () {
     if (audio.paused) {
       audio.play();
       updatePlayStatus(true, false, audio_title);
-      $(target).find('.status-icon').removeClass('fa-play-circle-o').addClass('fa-pause-circle-o');
+      $(target).find('.status-icon').removeClass('fa-play-circle').addClass('fa-pause-circle');
     }else{
       audio.pause();
       updatePlayStatus(false, true);
-      $(target).find('.status-icon').removeClass('fa-pause-circle-o').addClass('fa-play-circle-o');
+      $(target).find('.status-icon').removeClass('fa-pause-circle').addClass('fa-play-circle');
     }
   }
 
@@ -70,15 +70,15 @@ $(function () {
       currentlyPlaying.removeClass('disabled');
       $('.playing-text').html(audio_title);
       //update the icon
-      icon.removeClass('fa-play-circle-o').addClass('fa-pause-circle-o');
+      icon.removeClass('fa-play-circle').addClass('fa-pause-circle');
     }else if (is_paused) {
       //just change the icon status
-      icon.removeClass('fa-pause-circle-o').addClass('fa-play-circle-o');
+      icon.removeClass('fa-pause-circle').addClass('fa-play-circle');
     }else{
       //the audio has stopped - reset the display
       currentlyPlaying.addClass('disabled');
       $('.playing-text').html('Nothing selected...');
-      icon.removeClass('fa-play-circle-o').addClass('fa-pause-circle-o');
+      icon.removeClass('fa-play-circle').addClass('fa-pause-circle');
     }
   }
 

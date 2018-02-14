@@ -4,6 +4,8 @@ CACHE MANIFEST
 # Explicitly cached entries
 index.html
 css/bootstrap.min.css
+css/fa-regular.min.css
+css/fontawesome.min.css
 css/main.css
 js/dist/main.min.js
 
