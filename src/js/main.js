@@ -15,6 +15,7 @@ $(function () {
 
   var toggleAudio = function(target) {
     var audio_id = $(target).data('audio-id');
+    var audio = audio_files[audio_id];
     var audio_title = $(target).data('audio-title');
     //
     if (audio_id != current_audio_id) {
@@ -30,8 +31,10 @@ $(function () {
       highlightItem(audio_id);
       //
       current_audio_id = audio_id;
+    }else{
+      //someone has just clicked on the same month - reset the position to 0
+      audio.currentTime = 0;
     }
-    var audio = audio_files[audio_id];
     //
     //$(target).find('.replay-icon').removeClass('invisible');
     //
