@@ -26,22 +26,22 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/fa-regular.min.css">
+    <link rel="stylesheet" href="css/fa-solid.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <div class="modal fade" tabindex="-1" id="welcome_modal" role="dialog">
+    <div class="modal fade d-lg-none" tabindex="-1" id="welcome_modal" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title">Finding Big Ben</h2>
           </div>
           <div class="modal-body">
-            <p>Welcome to the website for Finding Big Ben - for Symphony Orchestra and audience with smartphones.</p>
-            <p>Composed by Adrian Budgen, commissioned by Ipswich Orchestral Society.</p>
-            <p>If you are in the audience please click the button below and choose from the list of months in the list.</p>
+            <p>Finding Big Ben is a new ISO commission from composer Adrian Budgen for our family concert on March 4th 2018.</p>
+            <p>We need your help to get a search party up into space. To take part press Continue below and then select your birth month from the list which appears - a sound file will play which will make you part of the performance on the day.</p>
+            <p>Make sure you bring the phone to the concert, turn up the volume and play on cue!  Good luck, see you on March 4th and thank you for your help in Finding Big Ben.</p>
             <div class="btn-centered">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#welcome_modal">Continue...</button>
             </div>
@@ -50,13 +50,14 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid js-AudioFiles">
+    <div class="container-fluid d-lg-none js-AudioFiles">
       <div class="row">
         <div class="col-sm">
           <a href="#" class="js-playAudio" data-audio-id="1" data-audio-title="January">
             <div class="audio-cell month1">
               <div class="track-title">January</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -64,7 +65,8 @@
           <a href="#" class="js-playAudio" data-audio-id="2" data-audio-title="February">
             <div class="audio-cell month2">
               <div class="track-title">February</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -72,7 +74,8 @@
           <a href="#" class="js-playAudio" data-audio-id="3" data-audio-title="March">
             <div class="audio-cell month3">
               <div class="track-title">March</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -82,7 +85,8 @@
           <a href="#" class="js-playAudio" data-audio-id="4" data-audio-title="April">
             <div class="audio-cell month4">
               <div class="track-title">April</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -90,7 +94,8 @@
           <a href="#" class="js-playAudio" data-audio-id="5" data-audio-title="May">
             <div class="audio-cell month5">
               <div class="track-title">May</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -98,7 +103,8 @@
           <a href="#" class="js-playAudio" data-audio-id="6" data-audio-title="June">
             <div class="audio-cell month6">
               <div class="track-title">June</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -108,7 +114,8 @@
           <a href="#" class="js-playAudio" data-audio-id="7" data-audio-title="July">
             <div class="audio-cell month7">
               <div class="track-title">July</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -116,7 +123,8 @@
           <a href="#" class="js-playAudio" data-audio-id="8" data-audio-title="August">
             <div class="audio-cell month8">
               <div class="track-title">August</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -124,7 +132,8 @@
           <a href="#" class="js-playAudio" data-audio-id="9" data-audio-title="September">
             <div class="audio-cell month9">
               <div class="track-title">September</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -134,7 +143,8 @@
           <a href="#" class="js-playAudio" data-audio-id="10" data-audio-title="October">
             <div class="audio-cell month10">
               <div class="track-title">October</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -142,7 +152,8 @@
           <a href="#" class="js-playAudio" data-audio-id="11" data-audio-title="November">
             <div class="audio-cell month11">
               <div class="track-title">November</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -150,7 +161,8 @@
           <a href="#" class="js-playAudio" data-audio-id="12" data-audio-title="December">
             <div class="audio-cell month12">
               <div class="track-title">December</div>
-              <i class="far fa-play-circle status-icon"></i>
+              <i class="fas fa-play status-icon play-icon"></i>
+              <i class="fas fa-step-backward status-icon replay-icon js-replayIcon invisible"></i>
             </div>
           </a>
         </div>
@@ -160,10 +172,22 @@
           Nothing selected...
         </div>
         <div class="play-status-icon js-playStatus">
-          <i id="progress-icon" class="far fa-play-circle"></i>
+          <i id="progress-icon" class="fas fa-play"></i>
+        </div>
+        <div class="play-status-icon replay-status-icon js-replayIcon">
+          <i id="progress-icon" class="fas fa-step-backward"></i>
         </div>
         <div class="progress-time">
           <p>--:--</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid d-none d-lg-block">
+      <div class="row">
+        <div class="col-sm">
+          <div class="alert alert-primary" role="alert">
+            This site is designed for mobile devices.
+          </div>
         </div>
       </div>
     </div>

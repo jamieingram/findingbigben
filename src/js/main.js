@@ -22,7 +22,8 @@ $(function () {
       if (current_audio_id > 0) {
         var current_audio = audio_files[current_audio_id];
         var current_target = $('.js-playAudio[data-audio-id='+current_audio_id+']');
-        $(current_target).find('.status-icon').removeClass('fa-pause-circle').addClass('fa-play-circle');
+        $(current_target).find('.play-icon').removeClass('fa-pause').addClass('fa-play');
+        //$(current_target).find('.replay-icon').addClass('invisible');
         current_audio.pause();
       }
       updatePlayStatus(false, false);
@@ -32,14 +33,16 @@ $(function () {
     }
     var audio = audio_files[audio_id];
     //
+    //$(target).find('.replay-icon').removeClass('invisible');
+    //
     if (audio.paused) {
       audio.play();
       updatePlayStatus(true, false, audio_title);
-      $(target).find('.status-icon').removeClass('fa-play-circle').addClass('fa-pause-circle');
+      $(target).find('.play-icon').removeClass('fa-play').addClass('fa-pause');
     }else{
       audio.pause();
       updatePlayStatus(false, true);
-      $(target).find('.status-icon').removeClass('fa-pause-circle').addClass('fa-play-circle');
+      $(target).find('.play-icon').removeClass('fa-pause').addClass('fa-play');
     }
   }
 
@@ -70,15 +73,15 @@ $(function () {
       currentlyPlaying.removeClass('disabled');
       $('.playing-text').html(audio_title);
       //update the icon
-      icon.removeClass('fa-play-circle').addClass('fa-pause-circle');
+      icon.removeClass('fa-play').addClass('fa-pause');
     }else if (is_paused) {
       //just change the icon status
-      icon.removeClass('fa-pause-circle').addClass('fa-play-circle');
+      icon.removeClass('fa-pause').addClass('fa-play');
     }else{
       //the audio has stopped - reset the display
       currentlyPlaying.addClass('disabled');
       $('.playing-text').html('Nothing selected...');
-      icon.removeClass('fa-play-circle').addClass('fa-pause-circle');
+      icon.removeClass('fa-play').addClass('fa-pause');
     }
   }
 
@@ -96,6 +99,15 @@ $(function () {
         block.fadeTo(50, 1);
       }
     }
+  }
+
+  var updateDisplayedTime = function(audio) {
+    var progress = $('.progress-time');
+    var position = Math.round(audio.currentTime);
+    var duration = audio.duration;
+    var output_str = formatTime(position);
+    output_str += " / " + formatTime(duration);
+    progress.html(output_str);
   }
 
   $('.js-playAudio').click(function(e) {
@@ -116,17 +128,24 @@ $(function () {
         }
       }
       audio.ontimeupdate = function() {
-        var progress = $('.progress-time');
-        var position = Math.round(this.currentTime);
-        var duration = this.duration;
-        var output_str = formatTime(position);
-        output_str += " / " + formatTime(duration);
-        progress.html(output_str);
+        updateDisplayedTime(this);
       }
       //
       audio_files[audio_id] = audio;
     }
     toggleAudio(this);
+  });
+
+  $('.js-replayIcon').click(function(e) {
+    e.preventDefault();
+    if (current_audio_id > 0) {
+      var current_audio = audio_files[current_audio_id];
+      var current_target = $('.js-playAudio[data-audio-id='+current_audio_id+']');
+      if (current_audio.currentTime > 0) {
+        current_audio.currentTime = 0;
+        updateDisplayedTime(current_audio);
+      }
+    }
   });
 
   $('.js-playStatus').click(function(e) {

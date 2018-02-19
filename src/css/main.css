@@ -66,19 +66,20 @@ h1 h2 h3 h4 h5 h6 {
 }
 
 .status-icon {
-    font-size: 48px;
+    font-size: 28px;
     line-height: 100px;
+    float:right;
+}
+
+.replay-icon {
+  margin-right:20px;
 }
 
 .track-title {
   float:left;
   font-size:24px;
-  line-height: 90px;
-  padding-top:10px;
-}
-
-.status-icon {
-  float:right;
+  line-height: 95px;
+  padding-top:5px;
 }
 
 .btn-centered {
@@ -125,5 +126,9 @@ h1 h2 h3 h4 h5 h6 {
 
 .play-status-icon {
   float:right;
-  font-size: 24px;
+  font-size: 16px;
+}
+
+.replay-status-icon {
+  margin-right:10px;
 }
